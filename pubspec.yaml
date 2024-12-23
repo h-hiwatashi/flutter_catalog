@@ -1,3 +1,4 @@
+# バージョンの記載がないければ最新のバージョンがインストールされる
 name: flutter_catalog
 description: "A new Flutter project."
 publish_to: "none"
