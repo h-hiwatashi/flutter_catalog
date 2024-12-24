@@ -14,11 +14,31 @@ dependencies:
   flutter_riverpod:
   riverpod_annotation:
 
+  freezed:
+  equatable:
+  json_annotation:
+  freezed_annotation:
+
+  dio:
+  retrofit:
+
+  shared_preferences:
+  flutter_secure_storage:
+
+  local_auth:
+
+  go_router:
+
+  flutter_svg:
+
+  simple_logger:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
   build_runner:
   riverpod_generator:
+  custom_annotations:
 flutter:
   uses-material-design: true

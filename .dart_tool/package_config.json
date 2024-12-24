@@ -206,6 +206,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "freezed",
+      "rootUri": "file:///Users/hiromitsu/.pub-cache/hosted/pub.dev/freezed-2.5.7",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "freezed_annotation",
       "rootUri": "file:///Users/hiromitsu/.pub-cache/hosted/pub.dev/freezed_annotation-2.4.4",
       "packageUri": "lib/",
@@ -518,7 +524,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2024-12-23T15:07:00.448025Z",
+  "generated": "2024-12-24T14:45:39.468306Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///Users/hiromitsu/fvm/versions/3.27.1",
