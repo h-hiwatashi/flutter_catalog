@@ -1,5 +1,5 @@
 {
-  "dart.flutterSdkPath": ".fvm/versions/3.27.1",
+  "dart.flutterSdkPath": ".fvm/versions/3.24.5",
   "search.exclude": {
     "**/.fvm": true
   },
@@ -7,9 +7,9 @@
     "**/.fvm": true
   },
   "dart.lineLength": 80,
-  // editor
-  "editor.rulers": [80],
-  // file nesting
+  "editor.rulers": [
+    80
+  ],
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
