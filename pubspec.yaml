@@ -33,6 +33,7 @@ dependencies:
   simple_logger:
   dio: ^5.7.0
   hooks_riverpod: ^2.6.1
+  video_player: ^2.9.2
 
 dev_dependencies:
   flutter_test:
