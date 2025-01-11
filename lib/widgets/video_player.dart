@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:video_player/video_player.dart';
 
+/// https://pub.dev/packages/video_player
+/// https://docs.flutter.dev/cookbook/plugins/play-video
+
 class VideoPlayerWidget extends HookConsumerWidget {
   late VideoPlayerController _controller;
 
