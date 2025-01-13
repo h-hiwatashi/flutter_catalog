@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:video_player/video_player.dart';
 
 /// https://pub.dev/packages/video_player
 /// https://docs.flutter.dev/cookbook/plugins/play-video
-
 class VideoPlayerWidget extends HookWidget {
-  VideoPlayerWidget({super.key});
+  const VideoPlayerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
