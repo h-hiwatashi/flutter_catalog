@@ -4,8 +4,8 @@ import 'package:video_player/video_player.dart';
 
 /// https://pub.dev/packages/video_player
 /// https://docs.flutter.dev/cookbook/plugins/play-video
-class VideoPlayerWidget extends HookWidget {
-  const VideoPlayerWidget({super.key});
+class VideoPlayerView extends HookWidget {
+  const VideoPlayerView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +21,16 @@ class VideoPlayerWidget extends HookWidget {
     }, [controller]);
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Video Player View'),
+      ),
       body: Center(
         child: controller.value.isInitialized
             ? AspectRatio(
                 aspectRatio: controller.value.aspectRatio,
                 child: VideoPlayer(controller),
               )
-            : Container(),
+            : CircularProgressIndicator(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
