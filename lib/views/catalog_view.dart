@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/infra/router.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-import '../widgets/video_player.dart';
 
 class CatalogView extends StatelessWidget {
   const CatalogView({super.key});
