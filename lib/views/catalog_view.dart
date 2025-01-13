@@ -6,24 +6,26 @@ class CatalogView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Catalog View'),
-      ),
-      body: Column(
-        children: [
-          FilledButton(
-            onPressed: () {
-              context.push('/video_player');
-            },
-            style: OutlinedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Catalog View'),
+        ),
+        body: ListView(
+          children: [
+            FilledButton(
+              onPressed: () {
+                context.push('/video_player');
+              },
+              style: OutlinedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
               ),
+              child: Text('video_player'),
             ),
-            child: Text('video_player'),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
