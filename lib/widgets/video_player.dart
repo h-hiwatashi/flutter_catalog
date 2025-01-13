@@ -12,9 +12,15 @@ class VideoPlayerView extends HookWidget {
     final controller = useMemoized(() => VideoPlayerController.networkUrl(Uri.parse(
         'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4')));
     final initialized = useState(false);
+    final isPlaying = useState(false);
+
     useEffect(() {
       controller.initialize().then((_) {
         initialized.value = true;
+        isPlaying.value = controller.value.isPlaying;
+      });
+      controller.addListener(() {
+        isPlaying.value = controller.value.isPlaying;
       });
 
       return controller.dispose;
@@ -26,6 +32,9 @@ class VideoPlayerView extends HookWidget {
       ),
       body: Center(
         child: controller.value.isInitialized
+
+            /// https://api.flutter.dev/flutter/widgets/AspectRatio-class.html
+            /// https://www.youtube.com/watch?v=XcnP3_mO_Ms
             ? AspectRatio(
                 aspectRatio: controller.value.aspectRatio,
                 child: VideoPlayer(controller),
@@ -37,8 +46,7 @@ class VideoPlayerView extends HookWidget {
           controller.value.isPlaying ? controller.pause() : controller.play();
         },
         child: Icon(
-          // TODO: Fix the icon
-          controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+          isPlaying.value ? Icons.pause : Icons.play_arrow,
         ),
       ),
     );
