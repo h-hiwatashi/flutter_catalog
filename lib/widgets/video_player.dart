@@ -37,6 +37,7 @@ class VideoPlayerView extends HookWidget {
           controller.value.isPlaying ? controller.pause() : controller.play();
         },
         child: Icon(
+          // TODO: Fix the icon
           controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
         ),
       ),
