@@ -1,0 +1,7 @@
+name: my_project
+repository: https://github.com/h-hiwatashi/flutter_catalog
+packages:
+  # packagesディレクトリとそのexampleパッケージを対象にする例(globeパターン使用)
+  - packages/*
+  - packages/*/example
+ignore: # 除外したいパッケージがあればリストアップ可能
