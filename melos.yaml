@@ -4,4 +4,13 @@ packages:
   # packagesディレクトリとそのexampleパッケージを対象にする例(globeパターン使用)
   - packages/*
   - packages/*/example
-ignore: # 除外したいパッケージがあればリストアップ可能
+command:
+  bootstrap:
+    hooks:
+      post: |
+        melos exec --flutter --dir-exists=lib/l10n -- "flutter gen-l10n"
+  clean:
+    hooks:
+      post: |
+        melos exec --flutter -- "flutter clean"
+        melos exec --flutter --file-exists="ios/Podfile.lock" -- "cd ios && rm Podfile.lock"
