@@ -11,6 +11,18 @@ class CatalogView extends StatelessWidget {
         appBar: AppBar(
           title: Text('Catalog View'),
         ),
+        floatingActionButton: FloatingActionButton(
+          heroTag: '1',
+          onPressed: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('ボタンが押されました！'),
+              ),
+            );
+          },
+          hoverColor: Colors.pink,
+          child: const Icon(Icons.add),
+        ),
         body: ListView(
           children: [
             FilledButton(
@@ -23,6 +35,17 @@ class CatalogView extends StatelessWidget {
                 ),
               ),
               child: Text('video_player'),
+            ),
+            FilledButton(
+              onPressed: () {
+                context.push('/button_widgets');
+              },
+              style: OutlinedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: Text('button_widgets'),
             ),
           ],
         ),

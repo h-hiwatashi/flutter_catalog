@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../views/catalog_view.dart';
 import '../widgets/video_player.dart';
+import '../widgets/button_widgets.dart';
 
 final goRouter = GoRouter(
   // アプリが起動した時
@@ -29,6 +30,14 @@ final goRouter = GoRouter(
         );
       },
     ),
+    GoRoute(
+      path: '/button_widgets',
+      name: 'button_widgets',
+      pageBuilder: (context, state) => MaterialPage(
+        key: state.pageKey,
+        child: const ButtonWidgetsView(),
+      ),
+    )
   ],
   // 遷移ページがないなどのエラーが発生した時に、このページに行く
   errorPageBuilder: (context, state) => MaterialPage(
