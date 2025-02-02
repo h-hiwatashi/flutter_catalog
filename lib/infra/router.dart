@@ -36,7 +36,7 @@ final goRouter = GoRouter(
       name: 'button_widgets',
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
-        child: const ButtonWidgetsView(),
+        child: ButtonWidgetsView(),
       ),
     ),
     GoRoute(
