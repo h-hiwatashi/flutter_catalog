@@ -2,17 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ButtonWidgetsView extends ConsumerWidget {
-  ButtonWidgetsView({super.key});
-
-  final List<String> _options = <String>[
-    'Apple',
-    'Banana',
-    'Orange',
-    'Watermelon',
-    'Pineapple',
-    'Mango',
-    'Grapes',
-  ];
+  const ButtonWidgetsView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -107,13 +97,6 @@ class ButtonWidgetsView extends ConsumerWidget {
                         ),
                       ),
                       SizedBox(height: 10),
-                      TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'テキストフィールド',
-                        ),
-                      ),
-                      SizedBox(height: 10),
                       const Image(
                         image: NetworkImage(
                             'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
@@ -138,63 +121,6 @@ class ButtonWidgetsView extends ConsumerWidget {
                               color: Colors.blue,
                             ),
                           )
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Autocomplete<String>(
-                            optionsBuilder:
-                                (TextEditingValue textEditingValue) {
-                              if (textEditingValue.text == '') {
-                                return const Iterable<String>.empty();
-                              }
-                              return _options.where((String option) {
-                                return option.toLowerCase().contains(
-                                    textEditingValue.text.toLowerCase());
-                              });
-                            },
-                            onSelected: (String selection) {
-                              print('You just selected $selection');
-                            },
-                            fieldViewBuilder: (context, textEditingController,
-                                focusNode, onFieldSubmitted) {
-                              return TextFormField(
-                                controller: textEditingController,
-                                focusNode: focusNode,
-                                onFieldSubmitted: (String value) {
-                                  onFieldSubmitted();
-                                },
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Search for a fruit',
-                                ),
-                              );
-                            },
-                            optionsViewBuilder: (context, onSelected, options) {
-                              return Align(
-                                alignment: Alignment.topLeft,
-                                child: Material(
-                                  elevation: 4,
-                                  child: ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    shrinkWrap: true,
-                                    itemCount: options.length,
-                                    itemBuilder:
-                                        (BuildContext context, int index) {
-                                      final String option =
-                                          options.elementAt(index);
-                                      return ListTile(
-                                        title: Text(option),
-                                        onTap: () {
-                                          onSelected(option);
-                                        },
-                                      );
-                                    },
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
                         ],
                       ),
                       Divider(),

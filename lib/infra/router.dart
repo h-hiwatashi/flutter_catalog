@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../views/catalog_view.dart';
 import '../widgets/animation.dart';
+import '../widgets/input_widgets.dart';
 import '../widgets/video_player.dart';
 import '../widgets/button_widgets.dart';
 
@@ -45,6 +46,14 @@ final goRouter = GoRouter(
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
         child: const AnimationAndMotionExampleView(),
+      ),
+    ),
+    GoRoute(
+      path: '/input_widgets',
+      name: 'input_widgets',
+      pageBuilder: (context, state) => MaterialPage(
+        key: state.pageKey,
+        child: InputWidgetsView(),
       ),
     )
   ],
