@@ -23,53 +23,56 @@ class CatalogView extends StatelessWidget {
           hoverColor: Colors.pink,
           child: const Icon(Icons.add),
         ),
-        body: ListView(
-          children: [
-            FilledButton(
-              onPressed: () {
-                context.push('/video_player');
-              },
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView(
+            children: [
+              FilledButton(
+                onPressed: () {
+                  context.push('/video_player');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
+                child: Text('video_player'),
               ),
-              child: Text('video_player'),
-            ),
-            FilledButton(
-              onPressed: () {
-                context.push('/button_widgets');
-              },
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+              FilledButton(
+                onPressed: () {
+                  context.push('/button_widgets');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
+                child: Text('button_widgets'),
               ),
-              child: Text('button_widgets'),
-            ),
-            FilledButton(
-              onPressed: () {
-                context.push('/animation_and_motion_example');
-              },
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+              FilledButton(
+                onPressed: () {
+                  context.push('/animation_and_motion_example');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
+                child: Text('animation_and_motion_example'),
               ),
-              child: Text('animation_and_motion_example'),
-            ),
-            FilledButton(
-              onPressed: () {
-                context.push('/input_widgets');
-              },
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+              FilledButton(
+                onPressed: () {
+                  context.push('/input_widgets');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
+                child: Text('input_widgets'),
               ),
-              child: Text('input_widgets'),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
