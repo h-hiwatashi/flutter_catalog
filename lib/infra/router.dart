@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../views/catalog_view.dart';
+import '../widgets/animation.dart';
 import '../widgets/video_player.dart';
 import '../widgets/button_widgets.dart';
 
@@ -36,6 +37,14 @@ final goRouter = GoRouter(
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
         child: const ButtonWidgetsView(),
+      ),
+    ),
+    GoRoute(
+      path: '/animation_and_motion_example',
+      name: 'animation_and_motion_example',
+      pageBuilder: (context, state) => MaterialPage(
+        key: state.pageKey,
+        child: const AnimationAndMotionExampleView(),
       ),
     )
   ],
