@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/widgets/carousel_slider.dart';
 import 'package:go_router/go_router.dart';
 
 import '../views/catalog_view.dart';
@@ -54,6 +55,14 @@ final goRouter = GoRouter(
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
         child: InputWidgetsView(),
+      ),
+    ),
+    GoRoute(
+      path: '/carousel_slider',
+      name: 'carousel_slider',
+      pageBuilder: (context, state) => MaterialPage(
+        key: state.pageKey,
+        child: CarouselSliderView(),
       ),
     )
   ],
