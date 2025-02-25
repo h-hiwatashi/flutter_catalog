@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/widgets/carousel_slider.dart';
+import 'package:flutter_catalog/app/widgets/carousel_slider.dart';
 import 'package:go_router/go_router.dart';
 
-import '../views/catalog_view.dart';
-import '../widgets/animation.dart';
-import '../widgets/input_widgets.dart';
-import '../widgets/video_player.dart';
-import '../widgets/button_widgets.dart';
+import '../app/views/catalog_view.dart';
+import '../app/widgets/animation.dart';
+import '../app/widgets/input_widgets.dart';
+import '../app/widgets/video_player.dart';
+import '../app/widgets/button_widgets.dart';
 
 final goRouter = GoRouter(
   // アプリが起動した時

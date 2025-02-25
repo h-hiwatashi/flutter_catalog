@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'infra/router.dart';
-import 'views/catalog_view.dart';
+import 'app/views/catalog_view.dart';
 
 void main() {
   runApp(ProviderScope(child: const MyApp()));
