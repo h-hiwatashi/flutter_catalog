@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$DrinkClass {
+mixin _$Drink {
   String get name => throw _privateConstructorUsedError;
   int get price => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,33 +57,31 @@ mixin _$DrinkClass {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DrinkClassCopyWith<DrinkClass> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DrinkCopyWith<Drink> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DrinkClassCopyWith<$Res> {
-  factory $DrinkClassCopyWith(
-          DrinkClass value, $Res Function(DrinkClass) then) =
-      _$DrinkClassCopyWithImpl<$Res, DrinkClass>;
+abstract class $DrinkCopyWith<$Res> {
+  factory $DrinkCopyWith(Drink value, $Res Function(Drink) then) =
+      _$DrinkCopyWithImpl<$Res, Drink>;
   @useResult
   $Res call({String name, int price});
 }
 
 /// @nodoc
-class _$DrinkClassCopyWithImpl<$Res, $Val extends DrinkClass>
-    implements $DrinkClassCopyWith<$Res> {
-  _$DrinkClassCopyWithImpl(this._value, this._then);
+class _$DrinkCopyWithImpl<$Res, $Val extends Drink>
+    implements $DrinkCopyWith<$Res> {
+  _$DrinkCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -105,8 +103,7 @@ class _$DrinkClassCopyWithImpl<$Res, $Val extends DrinkClass>
 }
 
 /// @nodoc
-abstract class _$$CoffeeImplCopyWith<$Res>
-    implements $DrinkClassCopyWith<$Res> {
+abstract class _$$CoffeeImplCopyWith<$Res> implements $DrinkCopyWith<$Res> {
   factory _$$CoffeeImplCopyWith(
           _$CoffeeImpl value, $Res Function(_$CoffeeImpl) then) =
       __$$CoffeeImplCopyWithImpl<$Res>;
@@ -117,13 +114,13 @@ abstract class _$$CoffeeImplCopyWith<$Res>
 
 /// @nodoc
 class __$$CoffeeImplCopyWithImpl<$Res>
-    extends _$DrinkClassCopyWithImpl<$Res, _$CoffeeImpl>
+    extends _$DrinkCopyWithImpl<$Res, _$CoffeeImpl>
     implements _$$CoffeeImplCopyWith<$Res> {
   __$$CoffeeImplCopyWithImpl(
       _$CoffeeImpl _value, $Res Function(_$CoffeeImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -165,7 +162,7 @@ class _$CoffeeImpl extends _Coffee {
 
   @override
   String toString() {
-    return 'DrinkClass.coffee(name: $name, price: $price, isNeedSugar: $isNeedSugar)';
+    return 'Drink.coffee(name: $name, price: $price, isNeedSugar: $isNeedSugar)';
   }
 
   @override
@@ -182,7 +179,7 @@ class _$CoffeeImpl extends _Coffee {
   @override
   int get hashCode => Object.hash(runtimeType, name, price, isNeedSugar);
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -253,7 +250,7 @@ class _$CoffeeImpl extends _Coffee {
   }
 }
 
-abstract class _Coffee extends DrinkClass {
+abstract class _Coffee extends Drink {
   const factory _Coffee(
       {required final String name,
       required final int price,
@@ -266,7 +263,7 @@ abstract class _Coffee extends DrinkClass {
   int get price;
   bool get isNeedSugar;
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -275,7 +272,7 @@ abstract class _Coffee extends DrinkClass {
 }
 
 /// @nodoc
-abstract class _$$MilkImplCopyWith<$Res> implements $DrinkClassCopyWith<$Res> {
+abstract class _$$MilkImplCopyWith<$Res> implements $DrinkCopyWith<$Res> {
   factory _$$MilkImplCopyWith(
           _$MilkImpl value, $Res Function(_$MilkImpl) then) =
       __$$MilkImplCopyWithImpl<$Res>;
@@ -286,12 +283,12 @@ abstract class _$$MilkImplCopyWith<$Res> implements $DrinkClassCopyWith<$Res> {
 
 /// @nodoc
 class __$$MilkImplCopyWithImpl<$Res>
-    extends _$DrinkClassCopyWithImpl<$Res, _$MilkImpl>
+    extends _$DrinkCopyWithImpl<$Res, _$MilkImpl>
     implements _$$MilkImplCopyWith<$Res> {
   __$$MilkImplCopyWithImpl(_$MilkImpl _value, $Res Function(_$MilkImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -333,7 +330,7 @@ class _$MilkImpl extends _Milk {
 
   @override
   String toString() {
-    return 'DrinkClass.milk(name: $name, price: $price, isHot: $isHot)';
+    return 'Drink.milk(name: $name, price: $price, isHot: $isHot)';
   }
 
   @override
@@ -349,7 +346,7 @@ class _$MilkImpl extends _Milk {
   @override
   int get hashCode => Object.hash(runtimeType, name, price, isHot);
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -420,7 +417,7 @@ class _$MilkImpl extends _Milk {
   }
 }
 
-abstract class _Milk extends DrinkClass {
+abstract class _Milk extends Drink {
   const factory _Milk(
       {required final String name,
       required final int price,
@@ -433,7 +430,7 @@ abstract class _Milk extends DrinkClass {
   int get price;
   int get isHot;
 
-  /// Create a copy of DrinkClass
+  /// Create a copy of Drink
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)

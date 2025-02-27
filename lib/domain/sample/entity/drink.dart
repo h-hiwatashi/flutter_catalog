@@ -3,16 +3,16 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'drink.freezed.dart';
 
 @freezed
-sealed class DrinkClass with _$DrinkClass {
-  factory DrinkClass.fromDto(bool isCoffee) {
+sealed class Drink with _$Drink {
+  factory Drink.fromDto(bool isCoffee) {
     if (isCoffee) {
-      return const DrinkClass.coffee(
+      return const Drink.coffee(
         name: 'coffee',
         price: 100,
         isNeedSugar: true,
       );
     } else {
-      return const DrinkClass.milk(
+      return const Drink.milk(
         name: 'milk',
         price: 50,
         isHot: 50,
@@ -20,13 +20,13 @@ sealed class DrinkClass with _$DrinkClass {
     }
   }
 
-  const DrinkClass._();
-  const factory DrinkClass.coffee({
+  const Drink._();
+  const factory Drink.coffee({
     required String name,
     required int price,
     required bool isNeedSugar,
   }) = _Coffee;
-  const factory DrinkClass.milk({
+  const factory Drink.milk({
     required String name,
     required int price,
     required int isHot,
