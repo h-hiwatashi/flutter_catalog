@@ -82,6 +82,17 @@ class CatalogView extends StatelessWidget {
                 ),
                 child: Text('carousel_slider'),
               ),
+              FilledButton(
+                onPressed: () {
+                  context.push('/debug_widgets');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                child: Text('debug_widgets'),
+              ),
             ],
           ),
         ),

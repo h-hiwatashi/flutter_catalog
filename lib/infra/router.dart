@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../app/views/catalog_view.dart';
 import '../app/widgets/animation.dart';
+import '../app/widgets/debug_widgets.dart';
 import '../app/widgets/input_widgets.dart';
 import '../app/widgets/video_player.dart';
 import '../app/widgets/button_widgets.dart';
@@ -63,6 +64,14 @@ final goRouter = GoRouter(
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
         child: CarouselSliderView(),
+      ),
+    ),
+    GoRoute(
+      path: '/debug_widgets',
+      name: 'debug_widgets',
+      pageBuilder: (context, state) => MaterialPage(
+        key: state.pageKey,
+        child: DebugWidgetsView(),
       ),
     )
   ],

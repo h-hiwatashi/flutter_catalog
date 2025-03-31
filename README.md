@@ -1,5 +1,9 @@
 # flutter_catalog
-## FlutterのWidget練習用repo
 
+## Flutter の Widget 練習用 repo
 
 [![melos](https://img.shields.io/badge/maintained%20with-melos-f700ff.svg?style=flat-square)](https://github.com/invertase/melos)
+
+# コマンド
+
+flutter pub run build_runner build --delete-conflicting-outputs

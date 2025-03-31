@@ -36,6 +36,7 @@ dependencies:
   video_player: ^2.9.2
   carousel_slider: ^5.0.0
   auto_route: ^9.3.0+1
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:
