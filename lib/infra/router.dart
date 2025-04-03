@@ -4,8 +4,9 @@ import 'package:go_router/go_router.dart';
 
 import '../app/views/catalog_view.dart';
 import '../app/widgets/animation.dart';
-import '../app/widgets/debug_widgets.dart';
+import '../app/widgets/debug_widget.dart';
 import '../app/widgets/input_widgets.dart';
+import '../app/widgets/layout.dart';
 import '../app/widgets/video_player.dart';
 import '../app/widgets/button_widgets.dart';
 
@@ -67,11 +68,11 @@ final goRouter = GoRouter(
       ),
     ),
     GoRoute(
-      path: '/debug_widgets',
-      name: 'debug_widgets',
+      path: '/layout_widgets',
+      name: 'layout_widgets',
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
-        child: DebugWidgetsView(),
+        child: LayoutView(),
       ),
     )
   ],

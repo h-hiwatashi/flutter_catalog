@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import '../utl/custom_scaffold.dart';
 
 /// 動作確認用
-class DebugWidgetsView extends StatelessWidget {
-  const DebugWidgetsView({super.key});
+class LayoutView extends StatelessWidget {
+  const LayoutView({super.key});
 
   static const Duration duration = Duration(seconds: 1);
   static const Curve curve = Curves.fastOutSlowIn;

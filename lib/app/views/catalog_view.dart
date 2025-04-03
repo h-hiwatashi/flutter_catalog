@@ -84,6 +84,17 @@ class CatalogView extends StatelessWidget {
               ),
               FilledButton(
                 onPressed: () {
+                  context.push('/layout_widgets');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                child: Text('layout_widgets'),
+              ),
+              FilledButton(
+                onPressed: () {
                   context.push('/debug_widgets');
                 },
                 style: OutlinedButton.styleFrom(
