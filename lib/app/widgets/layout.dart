@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../utl/custom_scaffold.dart';
+import '../utl/export.dart';
 
 /// 動作確認用
 class LayoutView extends StatelessWidget {
