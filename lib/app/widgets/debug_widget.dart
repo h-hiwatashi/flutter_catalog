@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -16,7 +15,32 @@ class DebugWidgetsView extends StatelessWidget {
         title: Text('Debug Widgets View'),
       ),
       backgroundColor: Colors.blueGrey,
-      body: SizedBox(),
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          // 親の幅を取得
+          final parentWidgetWidth = constraints.maxWidth;
+          final isNarrow = parentWidgetWidth < 180;
+
+          return Flex(
+              direction: isNarrow ? Axis.vertical : Axis.horizontal,
+              children: [
+                Container(
+                  width: 200,
+                  height: 120,
+                  color: Colors.blue,
+                  child: const Center(child: Text('Container')),
+                ),
+                const Gap(20),
+                Container(
+                  width: 200,
+                  height: 120,
+                  color: Colors.red,
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  child: const Center(child: Text('Container')),
+                ),
+              ]);
+        },
+      ),
     );
   }
 }
