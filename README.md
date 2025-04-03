@@ -7,3 +7,7 @@
 # コマンド
 
 flutter pub run build_runner build --delete-conflicting-outputs
+
+# TODO
+
+riverpod_lint の assist が動かない。
