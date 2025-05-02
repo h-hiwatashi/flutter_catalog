@@ -39,6 +39,7 @@ dependencies:
   gap: ^3.0.1
   riverpod_lint: ^2.6.1
   custom_lint: ^0.7.0
+  showcaseview: ^4.0.1
 
 dev_dependencies:
   flutter_test:
