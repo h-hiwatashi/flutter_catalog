@@ -115,6 +115,17 @@ class CatalogView extends StatelessWidget {
                 ),
                 child: Text('information_widgets'),
               ),
+              FilledButton(
+                onPressed: () {
+                  context.push('/infinite_scroll_tab_page');
+                },
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                child: Text('infinite_scroll_tab_page'),
+              ),
             ],
           ),
         ),

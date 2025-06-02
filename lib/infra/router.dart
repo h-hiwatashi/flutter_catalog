@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/app/widgets/carousel_slider.dart';
+import 'package:flutter_catalog/app/views/infinite_scroll_tab_page.dart';
 import 'package:go_router/go_router.dart';
 
 import '../app/views/catalog_view.dart';
@@ -81,6 +82,14 @@ final goRouter = GoRouter(
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
         child: InformationWidgets(),
+      ),
+    ),
+    GoRoute(
+      path: '/infinite_scroll_tab_page',
+      name: 'infinite_scroll_tab_page',
+      pageBuilder: (context, state) => MaterialPage(
+        key: state.pageKey,
+        child: InfiniteScrollTabViewPage(),
       ),
     )
   ],
