@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/app/widgets/infinite_scroll_tab/infinite_scroll_tab_view.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class InfiniteScrollTabViewPage extends StatelessWidget {
   const InfiniteScrollTabViewPage({Key? key}) : super(key: key);
@@ -24,20 +23,18 @@ class _Content extends StatefulWidget {
 }
 
 class __ContentState extends State<_Content> {
-  final contents = List.generate(9, (index) => index + 1)..shuffle();
-
-  String _convertContent(int number) =>
-      List.generate(number, (_) => '$number').join('');
+  final contents = List.generate(9, (index) => index + 1);
+  final _controller = InfiniteScrollTabViewController();
 
   @override
   Widget build(BuildContext context) {
     return InfiniteScrollTabView(
+      controller: _controller,
       contentLength: contents.length,
       onTabTap: (index) {
         debugPrint('tapped $index');
       },
       tabBuilder: (index, isSelected) => Text(
-        // _convertContent(contents[index]),
         index.toString(),
         style: TextStyle(
           color: isSelected ? Colors.pink : Colors.black54,
@@ -65,9 +62,13 @@ class __ContentState extends State<_Content> {
                       //           : Colors.black87,
                       //     ),
                       ),
-                      FloatingActionButton(onPressed: (){
-                        
-                      })
+                  FilledButton(
+                    onPressed: () {
+                      // index=7のタブに移動する。
+                      _controller.animateToTab(7);
+                    },
+                    child: const Text('Go to Tab 7'),
+                  )
                 ],
               ),
             ),

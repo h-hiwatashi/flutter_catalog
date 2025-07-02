@@ -30,6 +30,7 @@ class InnerInfiniteScrollTabView extends StatefulWidget {
     required this.tabPadding,
     required this.forceFixedTabWidth,
     required this.fixedTabWidthFraction,
+    this.controllerCallback,
   }) : super(key: key);
 
   final Size size;
@@ -50,6 +51,9 @@ class InnerInfiniteScrollTabView extends StatefulWidget {
   final double tabPadding;
   final bool forceFixedTabWidth;
   final double fixedTabWidthFraction;
+
+  /// コントローラーからのタブ移動要求を処理するためのコールバック。
+  final ValueChanged<IndexedTapCallback>? controllerCallback;
 
   @override
   InnerInfiniteScrollTabViewState createState() =>
@@ -197,6 +201,9 @@ class InnerInfiniteScrollTabViewState extends State<InnerInfiniteScrollTabView>
 
     _indicatorSize = ValueNotifier(_tabTextSizes[0]);
 
+    // コントローラーコールバックを設定する。
+    widget.controllerCallback?.call(animateToTab);
+
     _tabController.addListener(() {
       if (_isTabForceScrolling) return;
 
@@ -231,6 +238,13 @@ class InnerInfiniteScrollTabViewState extends State<InnerInfiniteScrollTabView>
         HapticFeedback.selectionClick();
       }
     });
+  }
+
+  /// 指定されたインデックスのタブに移動する。
+  void animateToTab(int index) {
+    if (index >= 0 && index < widget.contentLength) {
+      _onTapTab(index, index);
+    }
   }
 
   void _onTapTab(int modIndex, int rawIndex) async {

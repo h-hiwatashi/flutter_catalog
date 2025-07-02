@@ -12,6 +12,21 @@ typedef SelectIndexedTextBuilder = Text Function(int index, bool isSelected);
 /// A type of callback to execute processing on tapped tab.
 typedef IndexedTapCallback = void Function(int index);
 
+/// InfiniteScrollTabViewのコントローラー。
+class InfiniteScrollTabViewController {
+  IndexedTapCallback? _animateToTabCallback;
+
+  /// 指定されたタブインデックスに移動する。
+  void animateToTab(int index) {
+    _animateToTabCallback?.call(index);
+  }
+
+  /// 内部で使用するコールバックを設定する。
+  void _setAnimateToTabCallback(IndexedTapCallback callback) {
+    _animateToTabCallback = callback;
+  }
+}
+
 /// A widget for display combo of tabs and pages.
 ///
 /// Internally, the tabs and pages will build as just Scrollable elements like
@@ -24,6 +39,7 @@ class InfiniteScrollTabView extends StatelessWidget {
     required this.contentLength,
     required this.tabBuilder,
     required this.pageBuilder,
+    this.controller,
     this.onTabTap,
     this.separator,
     this.backgroundColor,
@@ -45,6 +61,9 @@ class InfiniteScrollTabView extends StatelessWidget {
   /// Otherwise, if this value is less than tab contents, [tabBuilder] output
   /// will be repeated in [contentLength].
   final int contentLength;
+
+  /// タブ移動を制御するためのコントローラー。
+  final InfiniteScrollTabViewController? controller;
 
   /// A callback for build tab contents that can scroll infinitely.
   ///
@@ -156,6 +175,9 @@ class InfiniteScrollTabView extends StatelessWidget {
       tabPadding: tabPadding,
       forceFixedTabWidth: forceFixedTabWidth,
       fixedTabWidthFraction: fixedTabWidthFraction,
+      controllerCallback: controller != null
+          ? (callback) => controller!._setAnimateToTabCallback(callback)
+          : null,
     );
   }
 }
